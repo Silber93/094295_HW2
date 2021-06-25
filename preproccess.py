@@ -126,9 +126,9 @@ class ImageDataset(Dataset):
         for i, img_file in enumerate(all_files):
             if i % int(len(all_files) / 4) == 0:
                 print(f"{100 * (i/len(all_files))}%")
-            if i == 40 and data_type == 'test':
+            if i == 400 and data_type == 'test':
                 break
-            if i == 160:
+            if i == 1600:
                 break
             features = img_file.replace('.jpg', '').split('__')
             img_id = i
@@ -161,9 +161,9 @@ class ImageDataset2(Dataset):
         for img_file in all_files:
             if i % int(len(all_files) / 4) == 0:
                 print(f"{100 * (i/len(all_files))}%")
-            if i == 4 and data_type == 'test':
+            if i == 400 and data_type == 'test':
                 break
-            if i == 160:
+            if i == 1600:
                 break
             features = img_file.replace('.jpg', '').split('__')
             img_id = i
